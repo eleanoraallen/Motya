@@ -1,0 +1,108 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+After loading the script.
+OverflowError: value too large to convert to short
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\main.py", line 480, in main
+    if renpy.parser.report_parse_errors():
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\parser.py", line 2929, in report_parse_errors
+    renpy.display.error.report_parse_errors(full_text, error_fn)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\error.py", line 187, in report_parse_errors
+    error_fn=error_fn,
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\game.py", line 281, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\error.py", line 45, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3194, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2094, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 490, in renpy.display.render.render_screen (gen\renpy.display.render.c:6805)
+    rv = render(root, width, height, st, st)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1594, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1591, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "renpy/display/render.pyx", line 310, in renpy.display.render.render_for_size (gen\renpy.display.render.c:4391)
+    return render(d, width, height, st, at)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1594, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1591, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "renpy/display/render.pyx", line 310, in renpy.display.render.render_for_size (gen\renpy.display.render.c:4391)
+    return render(d, width, height, st, at)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\viewport.py", line 264, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 925, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\text\text.py", line 2008, in render
+    layout = Layout(self, width, height, renders, splits_from=virtual_layout)
+  File "C:\Users\Nathan\Desktop\renpy-7.3.5-sdk\renpy\text\text.py", line 751, in __init__
+    textsupport.tweak_glyph_spacing(all_glyphs, lines, target_x_delta, target_y_delta, maxx, y)  # @UndefinedVariable
+  File "textsupport.pyx", line 964, in renpy.text.textsupport.tweak_glyph_spacing
+  File "textsupport.pxd", line 78, in renpy.text.textsupport.Line.y.__set__
+OverflowError: value too large to convert to short
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+ 
+Wed Dec 18 17:54:18 2019
